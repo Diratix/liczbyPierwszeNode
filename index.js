@@ -1,9 +1,6 @@
 //import biblioteki readline-sync
 const readline = require('readline-sync');
 
-//zmienna przechowująca informację czy liczba jest pierwsza
-let isPrime = true;
-
 //pobranie od użytkownika liczby
 const number = parseInt(readline.question('Podaj cyfre wiekszą od 0: '));
 console.log(number);
@@ -27,16 +24,58 @@ function checkPrime(number) {
     if (number > 1) {
         for (let i = 2; i < number; i++) {
             if (number % i == 0) {
-                isPrime = false;
-                break;
+                return false;
             }
         }
     }
+    return true;
 }
 
-//pobranie długości
-const numberLen = number.toString().length;
-console.log(isPrime);
+function prepareNumber(number) {
+    let numbers = [];
+    number.split('').forEach(num => {
+        numbers.push(parseInt(num));
+    });
+    return numbers;
+}
+
+//zamiana int na string
+const numberString = number.toString();
+
+//przygotowanie tablicy z liczbami
+let numbersArray = prepareNumber(numberString);
+
+//sprawdzenie czy cała liczba jest pierwsza
+let whole = checkPrime(number);
+
+//sprawdzenie sumy cyfr
+let sumArray = 0;
+for (let x of numbersArray) {
+    sumArray += x;
+}
+let sum = checkPrime(sumArray);
+
+//sprawdzenie poszczeólnych cyfr
+let each = true;
+for (let z of numbersArray) {
+    if (checkPrime(z) === true) {
+        each = true;
+    } else {
+        each = false;
+        break;
+    }
+}
+
+//podsumowanie
+if (whole === true && sum === true && each === true) {
+    console.log(`${number} jest w pełni liczbą pierwszą`);
+} else {
+    console.log(`${number} nie jest w pełni liczbą pierwszą`);
+}
+
+process.exit(0);
+
+
 
 
 
