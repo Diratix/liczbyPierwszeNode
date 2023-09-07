@@ -1,2 +1,2 @@
 # liczbyPierwszeNode
-To sie potem jebnie
+To sie potem jebnie jakiś opis i tyle
