@@ -2,8 +2,8 @@
 const readline = require('readline-sync');
 
 //pobranie od użytkownika liczby
-const number = parseInt(readline.question('Podaj cyfre wiekszą od 0: '));
-console.log(number);
+const number = parseInt(readline.question('Podaj cyfre wieksza od 0: '));
+
 //sprawzdenie czy liczba jest mniejsza od 1
 if (number < 1) {
     console.log('Podana liczba jest mniejsza od 1, nie może być liczbą pierwszą');
