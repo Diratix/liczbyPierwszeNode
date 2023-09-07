@@ -1,4 +1,4 @@
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 # Liczby Pierwsze Checker 
 
 <b> Author: <br/> <a href="https://github.com/Diratix" target="_blank">Daniel Pawelec(Diratix)<a/>
